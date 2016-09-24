@@ -9,5 +9,5 @@ Template: stockholm
 */
 @import url("../stockholm/style.css");
 
-.portfolio-home {width:100%;}
+#portfolio-home {width:100%;}
 
