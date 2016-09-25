@@ -9,5 +9,37 @@ Template: stockholm
 */
 @import url("../stockholm/style.css");
 
-#portfolio-home {width:100%;}
+#portfolio-home {
+	width:70%;
+	margin:0 auto;
+}
 
+@media only screen and (max-width: 767px) {
+#portfolio-home {
+	width:100%;
+}
+}
+
+
+/* MENU */
+.popup_menu .line, .popup_menu .line:after, .popup_menu .line:before {
+	background-color:transparent !important;
+}
+
+.side_menu_button .popup_menu.medium {
+  background: url(img/menu-dark.svg);
+  background-size:cover;
+  font-size: 24px;
+}
+.side_menu_button .popup_menu.medium.opened {
+  background: url(img/menu-white.svg);
+  background-size:cover;
+  font-size: 24px;
+  transform: rotate(-45deg);
+}
+
+.popup_menu.medium .popup_menu_inner, .popup_menu.medium .line, .popup_menu.medium .line:after, .popup_menu.medium .line:before {
+    height: 23px;
+    width: 89px;
+    /* display: none; */
+}
