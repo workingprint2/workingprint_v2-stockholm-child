@@ -9,19 +9,10 @@ Template: stockholm
 */
 @import url("../stockholm/style.css");
 
-#portfolio-home {
-	width:70%;
-	margin:0 auto;
-}
 
-@media only screen and (max-width: 767px) {
-#portfolio-home {
-	width:100%;
-}
-}
+/* /////////////////////////////////////////// */
 
-
-/* MENU */
+/* Menu */
 .popup_menu .line, .popup_menu .line:after, .popup_menu .line:before {
 	background-color:transparent !important;
 }
@@ -32,7 +23,7 @@ Template: stockholm
   font-size: 24px;
 }
 .side_menu_button .popup_menu.medium.opened {
-  background: url(img/menu-white.svg);
+  background: url(img/menu-white-x2.svg);
   background-size:cover;
   font-size: 24px;
   transform: rotate(-45deg);
@@ -43,3 +34,43 @@ Template: stockholm
     width: 89px;
     /* display: none; */
 }
+
+/* End Menu  */
+/* /////////////////////////////////////////// */
+
+/* Home Portfolio */
+
+#portfolio-home {
+	width:70%;
+	margin:0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+#portfolio-home {
+	width:100%;
+}
+#portfolio-home .vc_column_container>.vc_column-inner {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+}
+
+/* End Home Portfolio */
+/* /////////////////////////////////////////// */
+
+/* Home Featured Area  */
+
+.featured1 {
+}
+
+/* End Home Featured Area  */
+/* /////////////////////////////////////////// */
+
+/* Footer  */
+
+footer {
+	margin-top:100px;
+}
+
+/* End Footer  */
