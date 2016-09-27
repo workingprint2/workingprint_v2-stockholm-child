@@ -16,9 +16,48 @@ Template: stockholm
 header .q_logo a {
 	height:25px !important;
 }
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+header.scrolled .q_logo a {
+    height: 25px !important;
+	top: 110px;
+	transform: rotate(270deg);
+	transition: all .2s ease-in-out;
+	/* other boring browsers */
+	-webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+	
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.scrolled .q_logo {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";       /* IE 8 */
+	filter: alpha(opacity=20);  /* IE 5-7 */
+	-moz-opacity: 0.2;          /* Netscape */
+	-khtml-opacity: 0.2;        /* Safari 1.x */
+	opacity: 0.2;               /* Good browsers */
+}
+
 @media only screen and (max-width: 767px) {
 header .q_logo a {
 	height:18px !important;
+	transform: rotate(0deg);
 }
 }
 
@@ -92,3 +131,34 @@ footer {
 }
 
 /* /////////////////////////////////////////// */
+
+/* Portfolio Sing Pages */
+
+.single-portfolio_page .title {
+	border-bottom: 1px solid #eeeeee;
+	border-top: 1px solid #eeeeee;
+    /* background-color: #fbfbfb; */
+}
+
+.title.with_title_text_bg_color h1 {
+    padding: 27px 0px;
+    margin-top: 170px;
+	margin-bottom: 0px;
+}
+@media only screen and (max-width: 1024px) {
+.single-portfolio_page .title {
+	text-align:center;
+}
+.title.with_title_text_bg_color h1 {
+    padding: 27px 0px;
+	margin-top: 0px;
+    margin-bottom: 0px;
+}
+}
+@media only screen and (max-width: 768px) {
+
+.title.with_title_text_bg_color h1 {
+    padding: 20px 0px;
+	margin:0 auto;
+}
+}
