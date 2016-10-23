@@ -262,6 +262,15 @@ header .q_logo a {
     ) !important;
 }
 
+#cap3, #cap6 {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)" !important;       /* IE 8 */
+	filter: alpha(opacity=5) !important;  /* IE 5-7 */
+	-moz-opacity: 0.5 !important;          /* Netscape */
+	-khtml-opacity: 0.5 !important;        /* Safari 1.x */
+	opacity: 0.5 !important;               /* Good browsers */
+}
+			
+
 /* Home Portfolio */
 
 #portfolio-home {
